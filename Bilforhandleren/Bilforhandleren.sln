@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bilforhandleren", "Bilforhandleren\Bilforhandleren.csproj", "{DC52B267-990B-422B-A472-6EF20D8D7DD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilforhandleren.test", "Bilforhandleren.test\Bilforhandleren.test.csproj", "{B4233F5F-9793-4D75-8075-BBCAA5B2A194}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC52B267-990B-422B-A472-6EF20D8D7DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC52B267-990B-422B-A472-6EF20D8D7DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC52B267-990B-422B-A472-6EF20D8D7DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC52B267-990B-422B-A472-6EF20D8D7DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4233F5F-9793-4D75-8075-BBCAA5B2A194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4233F5F-9793-4D75-8075-BBCAA5B2A194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4233F5F-9793-4D75-8075-BBCAA5B2A194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4233F5F-9793-4D75-8075-BBCAA5B2A194}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {849EDC98-A0C9-4515-A280-0D3CB2D52A7C}
+	EndGlobalSection
+EndGlobal
