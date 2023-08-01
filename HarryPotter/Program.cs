@@ -1,8 +1,12 @@
 ﻿using HarryPotter;
 
-Character Person1 = new Character("Harry Potter", "Griffindor", "Owl", "Kristtorn" );
-Person1.PersonIntro();
+var program = new Hogwarts();
 
-MagicStore newStore = new MagicStore();//små forbokstaver på lokale variabler
-newStore.WelcomeToTheStore();
 
+
+/*
+ * Hovedmeny: velg karakter.
+ * Velge trylling, butikk, sende brev.
+ * Gjør det playable.
+ * 
+ */

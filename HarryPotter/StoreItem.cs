@@ -5,7 +5,7 @@
         public string Name { get; private set; }
         public StoreItem(string name)
         {
-            Name = name; 
+            Name = name;
         }
     }
 }

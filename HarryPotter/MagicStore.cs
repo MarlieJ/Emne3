@@ -1,4 +1,6 @@
-﻿namespace HarryPotter
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace HarryPotter
 {
     internal class MagicStore
     {
@@ -7,24 +9,42 @@
         {
             InventoryItems = new List<StoreItem>() { new Animal("Owl"), new Animal("Rat"), new Animal("Cat"), new Wand("Phoenixwand"), new Wand("UnicornWand"), new Wand("MagicWand") };
         }
-        public void WelcomeToTheStore()
+        public void WelcomeToTheStore(Character PersonX)
         {
-            Console.WriteLine($"Hello. Welcome to the store. Do you want to buy a pet or a wand? Write P for pet og W for wand: ");
-            var chosenThing = Console.ReadLine();
-            List<StoreItem> itemsToPrint = new List<StoreItem>();
-            if(chosenThing == "P")
+            bool inStore = true;
+            while (inStore)
             {
-               itemsToPrint = getAnimalItems();
+                Console.WriteLine($"Hello. Welcome to the store {PersonX.name}. Do you want to buy a pet or a wand? Write P for pet og W for wand. Type X for exit.");
+                var chosenThing = Console.ReadLine().ToLower();
+                List<StoreItem> itemsToPrint = new List<StoreItem>();
+                if (chosenThing == "p")
+                {
+                    itemsToPrint = getAnimalItems();
+                }
+                else if (chosenThing == "w")
+                {
+                    itemsToPrint = getWandItems();
+                }
+                else
+                {
+                    Console.WriteLine("Takk, ha en fin dag.");
+                    inStore = false;
+                    break;
+                }
+
+                printProduct(itemsToPrint);
+                var chosenProdInStore = PersonX.chooseProductInStoreNumber();
+
+                var chosenProd = itemsToPrint[chosenProdInStore];
+                Console.WriteLine($"I {PersonX.name} choose {chosenProd.Name}.");
+                Console.WriteLine($"Hope you will be satisfied with {chosenProd.Name}");
+                PersonX.takeItemAndRun(chosenProd);
+                /*
+                 * 1. Velge en vare
+                 * 2. Gå til disken og kjøpe den
+                 * 3. Ta med seg varen og gå
+                 */
             }
-            else
-            {
-                itemsToPrint = getWandItems();
-            }
-            printProduct(itemsToPrint);
-            Console.WriteLine("What product do you want? Type number: ");
-            var chosenProduct = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Hope you will be satisfied with {InventoryItems[chosenProduct].Name}");
-            
 
         }
         public List<StoreItem> getAnimalItems()
